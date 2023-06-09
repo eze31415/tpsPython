@@ -1,0 +1,68 @@
+#Ejercicio 10
+
+def deleteNotFace(cola):
+    i = 0
+    while i < len(cola):
+        if cola[i][''] == 'Facebook':
+            cola.pop(i)
+        else:
+            i += 1
+            
+def mostrarNotTwitter(cola):
+    for notificacion in cola:
+        if notificacion[''] == 'Twitter' and 'Python' in notificacion['mensaje']:
+            print(notificacion)
+            
+def notificacionesHorarias(cola):
+    pilaAux = []
+    contador = 0
+
+    for notificacion in cola:
+        if notificacion['hora'] >= '11:43' and notificacion['hora'] <= '15:57':
+            pilaAux.append(notificacion)
+
+    contador = len(pilaAux)
+
+    return contador
+
+
+#Ejercicio 22
+
+def nombreCapitanaMarvel(cola):
+    for personaje in cola:
+        if personaje[1] == 'Capitana Marvel':
+            return personaje[0]
+    return None
+
+def MostrarSuperheroesFemeninos(cola):
+    superheroes_femeninos = []
+    for personaje in cola:
+        if personaje[2] == 'Femenino':
+            superheroes_femeninos.append(personaje[1])
+    return superheroes_femeninos
+
+def mostrarPersonajesMasculinos(cola):
+    personajes_masculinos = []
+    for personaje in cola:
+        if personaje[2] == 'Masculino':
+            personajes_masculinos.append(personaje[0])
+    return personajes_masculinos
+
+def SuperheroeScottLang(cola):
+    for personaje in cola:
+        if personaje[0] == 'Scott Lang':
+            return personaje[1]
+    return None
+
+def datosNombresConS(cola):
+    personajes_con_S = []
+    for personaje in cola:
+        if personaje[0][0] == 'S' or personaje[1][0] == 'S':
+            personajes_con_S.append(personaje)
+    return personajes_con_S
+
+def BuscarCarolDanvers(cola):
+    for personaje in cola:
+        if personaje[0] == 'Carol Danvers':
+            return personaje[1]
+    return None
